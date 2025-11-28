@@ -4,12 +4,12 @@
 '''
 import torch
 
-def softmax_1(x : torch.tensor, dim : int = -1):
+def softmax_1(x : torch.Tensor, dim : int = -1):
     exp_x = torch.exp(x)
     sum_x = torch.sum(exp_x, dim, keepdim = True)
     return exp_x / sum_x
 
-def softmax(x : torch.tensor, dim : int = -1):
+def softmax(x : torch.Tensor, dim : int = -1):
     '''
         数值稳定的softmax防止溢,减去最大值,数学理论上保持不变
     '''

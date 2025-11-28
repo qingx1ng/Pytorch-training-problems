@@ -15,7 +15,7 @@ class CrossEntropy:
         self.labels = None
         self.probs = None
     
-    def softmax(self, x : torch.tensor, dim : int):
+    def softmax(self, x : torch.Tensor, dim : int):
         exp_x = torch.exp(x)
         sum_x = torch.sum(exp_x, dim, keepdim=True)
         return exp_x / sum_x
