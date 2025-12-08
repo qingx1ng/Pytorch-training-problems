@@ -10,7 +10,7 @@
 
 ### **2. 手写 CrossEntropy（forward + backward）**
 
-目标：掌握 autograd 机制
+目标：掌握 autograd 机制，掌握求梯度过程
 
 ### **3. 实现 broadcast：手动实现广播扩展**
 
@@ -47,7 +47,7 @@ PyTorch 看形状 (2,3) 和 (3,)，自动把 bias 看成 (1,3)，再在前面复
 
 ### **5. 自己写一个简单的 ReLU + backward**
 
-目标：自定义 autograd Function
+目标：自定义 autograd Function，理解自动计算梯度，而不需要一层一层的手推计算公式。如果是封装好的pytorch算子都可以自动计算梯度，如果需要自定义也只需要计算当前一层的局部梯度即可，按官方给的固定格式自定义的模块依然可以嵌入到网络结构中，然后利用autograd机制自动求梯度。
 
 ### **6. 用 Hook 打印每一层梯度最大值**
 
